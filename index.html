@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lydia Passion Traiteur — Gastronomie d'Exception pour vos Événements</title>
+  <meta name="description" content="Lydia Passion Traiteur sublime vos réceptions avec une gastronomie raffinée. Mariages, cocktails, événements d'entreprise — une signature culinaire unique en Île-de-France." />
+  <meta property="og:title" content="Lydia Passion Traiteur — Gastronomie d'Exception" />
+  <meta property="og:description" content="Une signature gastronomique d'exception pour chaque réception. Mariages, cocktails, événements professionnels." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Lydia Passion Traiteur",
+    "description": "Traiteur haut de gamme pour mariages, cocktails et événements professionnels",
+    "telephone": "[TÉLÉPHONE]",
+    "email": "[EMAIL]",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Île-de-France",
+      "addressCountry": "FR"
+    },
+    "priceRange": "€€€"
+  }
+  </script>
+
+</head>
+<body>
+
+  <!-- CURTAIN INTRO -->
+  <div id="curtain" role="presentation">
+    <div class="curtain-monogram">
+      <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="8" y="8" width="64" height="64" stroke="rgba(244,241,234,0.3)" stroke-width="1"/>
+        <text x="40" y="52" text-anchor="middle" font-family="Georgia, serif" font-size="36" fill="#F4F1EA" font-weight="400">LP</text>
+      </svg>
+    </div>
+    <div class="curtain-left"></div>
+    <div class="curtain-right"></div>
+  </div>
+
+    <!-- ═══════════════════════════════════════════════════════
+        NAVBAR
+        ═══════════════════════════════════════════════════════ -->
+    <nav class="navbar" id="navbar">
+      <div class="navbar__inner">
+
+        <!-- Logo -->
+        <a href="index.html" class="navbar__logo">
+          <img src="assets/images/logo.png" alt="Lydia Passion Traiteur" class="logo">        
+        </a>
+          
+
+        <!-- Desktop Links -->
+        <ul class="navbar__links">
+          <li><a href="index.html" data-i18n="nav_accueil">Accueil</a></li>
+          <li><a href="prestations.html" data-i18n="nav_prestations">Nos prestations</a></li>
+          <li><a href="galerie.html" data-i18n="nav_evenements">Galerie</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+
+        <!-- Right side: lang toggle + CTA -->
+        <div class="navbar__right">
+
+          <!-- CTA (desktop only) -->
+          <a href="devis.html" class="btn btn--primary navbar__cta" data-i18n="nav_cta">Demander un devis</a>
+
+          <!-- Hamburger (mobile) -->
+          <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile menu overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html" data-i18n="nav_accueil">Accueil</a>
+      <a href="prestations.html" data-i18n="nav_prestations">Nos prestations</a>
+      <a href="galerie.html" data-i18n="nav_evenements">Galerie</a>
+      <a href="contact.html" data-i18n="nav_contact">Contact</a>
+      <a href="devis.html" class="btn btn--primary" data-i18n="nav_cta">Demander un devis</a>
+    </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       HERO SECTION
+       ═══════════════════════════════════════════════════════ -->
+    <section class="hero" id="hero">
+      <!-- Background image -->
+      <div class="hero__bg">
+        <img src="assets/images/hero.png" alt="Gastronomie haut de gamme" loading="eager">
+      </div>
+
+      <!-- Overlay -->
+      <div class="hero__overlay"></div>
+
+
+
+      <!-- Content -->
+      <div class="hero__content">
+        <h1 class="hero__title">
+          <span data-i18n="hero_title_prefix">Traiteur artisanal<br>pour vos</span>
+          <span class="typewriter"></span>
+        </h1>
+
+        <p class="hero__subtitle" data-i18n="hero_subtitle">
+          Des saveurs subtiles, une présentation élégante, une expérience sensorielle
+        </p>
+
+        <div class="hero__buttons">
+          <a href="#prestations" class="btn btn--primary" data-i18n="hero_btn1">Voir nos prestations</a>
+          <a href="#contact" class="btn btn--ghost" data-i18n="hero_btn2">Nous contacter</a>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="hero__scroll">
+        <span data-i18n="hero_scroll">Découvrir</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       PRESTATIONS — CARROUSEL
+       ═══════════════════════════════════════════════════════ -->
+  <section class="prestations" id="prestations">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-header__label" data-i18n="prest_label">Ce que nous proposons</span>
+        <h2 class="section-header__title" data-i18n="prest_title">Nos prestations</h2>
+        <div class="section-header__line"></div>
+      </div>
+
+      <div class="carousel reveal">
+
+        <!-- Navigation arrows (desktop) -->
+        <button class="carousel__arrow carousel__arrow--left" id="carouselPrev" aria-label="Précédent">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="m15 18-6-6 6-6" />
+          </svg>
+        </button>
+        <button class="carousel__arrow carousel__arrow--right" id="carouselNext" aria-label="Suivant">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="m9 18 6-6-6-6" />
+          </svg>
+        </button>
+
+        <div class="carousel__track">
+
+<!-- Card 1: Mariages -->
+<article class="card">
+  <div class="card__image">
+    <img src="assets/images/buffet1.png" alt="Traiteur mariage en Île-de-France" loading="lazy">
+  </div>
+  <div class="card__body">
+    <h3 class="card__title" data-i18n="card1_title">Mariages</h3>
+    <p class="card__text" data-i18n="card1_text">
+      Des menus sur mesure pour célébrer votre journée unique avec gourmandise et convivialité.
+    </p>
+    <a href="#" class="card__link" data-i18n="card_btn">
+      Consulter la page
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path d="M5 12h14" />
+        <path d="m12 5 7 7-7 7" />
+      </svg>
+    </a>
+  </div>
+</article>
+
+<!-- Card 2: Événements d'entreprise -->
+<article class="card">
+  <div class="card__image">
+    <img src="assets/images/entree.png" alt="Événements pro en Île-de-France" loading="lazy">
+  </div>
+  <div class="card__body">
+    <h3 class="card__title" data-i18n="card2_title">Événements d'entreprise</h3>
+    <p class="card__text" data-i18n="card2_text">
+      Buffets et cocktails pensés pour vos réunions et événements professionnels en Île-de-France.
+    </p>
+    <a href="#" class="card__link" data-i18n="card_btn">
+      Consulter la page
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path d="M5 12h14" />
+        <path d="m12 5 7 7-7 7" />
+      </svg>
+    </a>
+  </div>
+</article>
+
+<!-- Card 3: Cocktails & Réceptions -->
+<article class="card">
+  <div class="card__image">
+    <img src="assets/images/nem.png" alt="Cocktails et réceptions Île-de-France" loading="lazy">
+  </div>
+  <div class="card__body">
+    <h3 class="card__title" data-i18n="card3_title">Cocktails & Réceptions</h3>
+    <p class="card__text" data-i18n="card3_text">
+      Créations salées et sucrées pour vos apéros, réceptions ou soirées festives à partager.
+    </p>
+    <a href="#" class="card__link" data-i18n="card_btn">
+      Consulter la page
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path d="M5 12h14" />
+        <path d="m12 5 7 7-7 7" />
+      </svg>
+    </a>
+  </div>
+</article>
+
+<!-- Card 4: Dîners privés -->
+<article class="card">
+  <div class="card__image">
+    <img src="assets/images/service.png" alt="Dîners privés Île-de-France" loading="lazy">
+  </div>
+  <div class="card__body">
+    <h3 class="card__title" data-i18n="card4_title">Dîners privés</h3>
+    <p class="card__text" data-i18n="card4_text">
+      Des dîners sur mesure chez vous, préparés par nos chefs pour un moment gourmand et intimiste.
+    </p>
+    <a href="#" class="card__link" data-i18n="card_btn">
+      Consulter la page
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path d="M5 12h14" />
+        <path d="m12 5 7 7-7 7" />
+      </svg>
+    </a>
+  </div>
+</article>
+
+<!-- Card 5: Plateaux repas -->
+<article class="card">
+  <div class="card__image">
+    <img src="assets/images/saumon.png" alt="Plateaux repas Île-de-France" loading="lazy">
+  </div>
+  <div class="card__body">
+    <h3 class="card__title" data-i18n="card5_title">Plateaux repas</h3>
+    <p class="card__text" data-i18n="card5_text">
+      Plateaux gourmands livrés directement dans vos locaux, pratiques et savoureux pour tous vos repas.
+    </p>
+    <a href="#" class="card__link" data-i18n="card_btn">
+      Consulter la page
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path d="M5 12h14" />
+        <path d="m12 5 7 7-7 7" />
+      </svg>
+    </a>
+  </div>
+</article>
+
+        </div><!-- /.carousel__track -->
+      </div><!-- /.carousel -->
+
+    </div>
+  </section>
+
+  <!-- GALERIE -->
+  <section id="galerie" aria-labelledby="galerie-title">
+    <div class="galerie-header">
+      <p class="section-eyebrow reveal">Notre univers</p>
+      <h2 class="section-title reveal reveal-delay-1" id="galerie-title">La table comme<br />œuvre d'art.</h2>
+    </div>
+    <div class="gallery-grid" role="list">
+      <div class="gallery-item reveal" role="listitem" tabindex="0" aria-label="Réception de mariage gastronomique">
+        <div class="gallery-placeholder gp-1"><img src="assets/images/entree.png" alt=""></div>
+        <div class="gallery-overlay" aria-hidden="true"><span class="gallery-zoom">⊕</span></div>
+        <div class="gallery-label">Dîner de mariage</div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-1" role="listitem" tabindex="0" aria-label="Buffet élégant">
+        <div class="gallery-placeholder gp-2"><img src="assets/images/buffet1.png" alt=""></div>
+        <div class="gallery-overlay" aria-hidden="true"><span class="gallery-zoom">⊕</span></div>
+        <div class="gallery-label">Buffet festif</div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-2" role="listitem" tabindex="0" aria-label="Cocktail dînatoire">
+        <div class="gallery-placeholder gp-3"><img src="assets/images/saumon.png" alt=""></div>
+        <div class="gallery-overlay" aria-hidden="true"><span class="gallery-zoom">⊕</span></div>
+        <div class="gallery-label">Cocktail d'entreprise</div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-1" role="listitem" tabindex="0" aria-label="Dessert d'exception">
+        <div class="gallery-placeholder gp-4"><img src="assets/images/nem.png" alt=""></div>
+        <div class="gallery-overlay" aria-hidden="true"><span class="gallery-zoom">⊕</span></div>
+        <div class="gallery-label">Desserts signature</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       VALEURS — CARDS HORIZONTALES
+       ═══════════════════════════════════════════════════════ -->
+  <section id="valeurs" aria-labelledby="valeurs-title">
+    <div class="valeurs-inner">
+
+      <div class="valeurs-header reveal">
+        <p class="section-eyebrow" style="color:var(--taupe);">Ce qui nous définit</p>
+        <h2 class="section-title light" id="valeurs-title">Notre philosophie<br /><em style="font-style:italic; color: var(--cerise-light);">culinaire.</em></h2>
+        <p class="valeurs-header-intro">
+          Quatre principes que nous servons à chaque réception, sans exception — la même rigueur qu'un menu que l'on compose avec soin.
+        </p>
+      </div>
+
+      <ul class="valeurs-row reveal" role="list">
+
+        <li class="valeur-card">
+          <span class="valeur-card__num">I</span>
+          <div class="valeur-card__media">
+            <img src="assets/images/valeur-excellence.png" alt="" loading="lazy">
+          </div>
+          <h3 class="valeur-card__name">Excellence</h3>
+          <p class="valeur-card__desc">Chaque assiette, chaque détail de dressage est pensé avec une exigence absolue. Nous ne livrons jamais moins que le meilleur.</p>
+        </li>
+
+        <li class="valeur-card">
+          <span class="valeur-card__num">II</span>
+          <div class="valeur-card__media">
+            <img src="assets/images/valeur-raffinement.png" alt="" loading="lazy">
+          </div>
+          <h3 class="valeur-card__name">Raffinement</h3>
+          <p class="valeur-card__desc">Le luxe est dans la sobriété du geste juste. Nos présentations naissent d'un travail esthétique minutieux et d'une sensibilité artistique.</p>
+        </li>
+
+        <li class="valeur-card">
+          <span class="valeur-card__num">III</span>
+          <div class="valeur-card__media">
+            <img src="assets/images/valeur-creativite.png" alt="" loading="lazy">
+          </div>
+          <h3 class="valeur-card__name">Créativité</h3>
+          <p class="valeur-card__desc">Chaque menu est une création originale, puisée dans les cuisines du monde et les produits de saison.</p>
+        </li>
+
+        <li class="valeur-card">
+          <span class="valeur-card__num">IV</span>
+          <div class="valeur-card__media">
+            <img src="assets/images/valeur-accompagnement.png" alt="" loading="lazy">
+          </div>
+          <h3 class="valeur-card__name">Accompagnement</h3>
+          <p class="valeur-card__desc">De la première rencontre au service final, votre vision devient notre mission, à chaque détail de votre événement.</p>
+        </li>
+
+      </ul>
+    </div>
+  </section>
+
+
+
+ <!-- ═══════════════════════════════════════════════════════
+       AVIS CLIENTS — Trustindex Style
+       ═══════════════════════════════════════════════════════ -->
+  <section class="reviews" id="reviews">
+    <div class="container">
+
+      <div class="reviews__header reveal">
+        <h2 class="reviews__title" data-i18n="reviews_title">Avis clients</h2>
+        <div class="reviews__summary">
+          <div class="reviews__brand" data-i18n="reviews_brand">Lydia Passion Traiteur</div>
+          <div class="reviews__stars">
+            <svg viewBox="0 0 24 24" class="star">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+            <svg viewBox="0 0 24 24" class="star">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+            <svg viewBox="0 0 24 24" class="star">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+            <svg viewBox="0 0 24 24" class="star">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+            <svg viewBox="0 0 24 24" class="star">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+          </div>
+          <a href="https://search.google.com/local/writereview?placeid=[ID_FICHE_GOOGLE_BUSINESS]" target="_blank"
+            rel="noopener noreferrer" class="btn btn--outline-dark reviews__btn" data-i18n="reviews_write">Écrire un
+            avis</a>
+        </div>
+      </div>
+
+      <div class="reviews__grid">
+        <!-- Card 1 -->
+        <div class="reviews__card">
+          <div class="reviews__card-top">
+            <div class="reviews__avatar-wrap">
+              <div class="reviews__avatar"
+                style="background:#ffcc80;display:flex;align-items:center;justify-content:center;font-weight:bold;color:#e65100;">
+                E</div>
+              <div class="reviews__avatar-badge">
+                <svg viewBox="0 0 24 24" fill="#fb662b">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+              </div>
+            </div>
+            <div class="reviews__meta">
+              <h3 class="reviews__name">Eliane Ikenga Tsondzabeka</h3>
+              <span class="reviews__date" data-i18n="reviews_date">Avril 2026</span>
+            </div>
+            <div class="reviews__google-icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                  fill="#4285F4" />
+                <path
+                  d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                  fill="#34A853" />
+                <path
+                  d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                  fill="#FBBC05" />
+                <path
+                  d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                  fill="#EA4335" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="reviews__rating">
+            <div class="reviews__stars">
+              <svg viewBox="0 0 24 24" class="star">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+              </svg>
+              <svg viewBox="0 0 24 24" class="star">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+              </svg>
+              <svg viewBox="0 0 24 24" class="star">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+              </svg>
+              <svg viewBox="0 0 24 24" class="star">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+              </svg>
+              <svg viewBox="0 0 24 24" class="star">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+              </svg>
+            </div>
+            <div class="reviews__verified">
+              <svg viewBox="0 0 24 24" fill="#3b82f6" width="16" height="16">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+              </svg>
+            </div>
+          </div>
+
+          <p class="reviews__text" data-i18n="reviews_text">
+            Traiteur au top ! Sérieuse, ponctuelle et très pro. Les produits sont frais, les plats sont succulents et tout est cuisiné avec passion. À l’écoute et de bon conseil. Parfait pour un mariage, un anniversaire ou un repas d’entreprise. Je recommande à 100% !
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="reviews__card" style="transition-delay: 0.1s;">
+          <div class="reviews__card-top">
+            <div class="reviews__avatar-wrap">
+              <div class="reviews__avatar"
+                style="background:#e1bee7;display:flex;align-items:center;justify-content:center;font-weight:bold;color:#6a1b9a;">
+                A</div>
+              <div class="reviews__avatar-badge">
+                <svg viewBox="0 0 24 24" fill="#fb662b">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+              </div>
+            </div>
+            <div class="reviews__meta">
+              <h3 class="reviews__name">aloni</h3>
+              <span class="reviews__date" data-i18n="reviews_date2">Mai 2026</span>
+            </div>
+            <div class="reviews__google-icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                  fill="#4285F4" />
+                <path
+                  d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                  fill="#34A853" />
+                <path
+                  d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                  fill="#FBBC05" />
+                <path
+                  d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                  fill="#EA4335" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="reviews__rating">
+            <div class="reviews__stars">
+              <svg viewBox="0 0 24 24" class="star">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+              </svg>
+              <svg viewBox="0 0 24 24" class="star">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+              </svg>
+              <svg viewBox="0 0 24 24" class="star">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+              </svg>
+              <svg viewBox="0 0 24 24" class="star">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+              </svg>
+              <svg viewBox="0 0 24 24" class="star">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+              </svg>
+            </div>
+            <div class="reviews__verified">
+              <svg viewBox="0 0 24 24" fill="#3b82f6" width="16" height="16">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+              </svg>
+            </div>
+          </div>
+
+          <p class="reviews__text" data-i18n="reviews_text2">
+Un immense merci pour ton professionnalisme et surtout pour la qualité incroyable de tes prestations ! Tout était absolument délicieux, raffiné et préparé avec beaucoup de soin. On sent la passion et l’amour du métier dans chaque détail.
+En plus d’être talentueuse, tu es une personne adorable, à l’écoute et toujours souriante. Tous les invités se sont régalés et n’ont fait que des compliments !
+Je recommande les yeux fermés à toutes les personnes qui cherchent un traiteur de confiance et de grande qualité ✨
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="reviews__card" style="transition-delay: 0.2s;">
+          <div class="reviews__card-top">
+            <div class="reviews__avatar-wrap">
+              <div class="reviews__avatar"
+                style="background:#bbdefb;display:flex;align-items:center;justify-content:center;font-weight:bold;color:#1565c0;">
+                A</div>
+            </div>
+            <div class="reviews__meta">
+              <h3 class="reviews__name">Agnès Chabot</h3>
+              <span class="reviews__date" data-i18n="reviews_date3">Mai 2025</span>
+            </div>
+            <div class="reviews__google-icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                  fill="#4285F4" />
+                <path
+                  d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                  fill="#34A853" />
+                <path
+                  d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                  fill="#FBBC05" />
+                <path
+                  d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                  fill="#EA4335" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="reviews__rating">
+            <div class="reviews__stars">
+              <svg viewBox="0 0 24 24" class="star">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+              </svg>
+              <svg viewBox="0 0 24 24" class="star">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+              </svg>
+              <svg viewBox="0 0 24 24" class="star">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+              </svg>
+              <svg viewBox="0 0 24 24" class="star">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+              </svg>
+              <svg viewBox="0 0 24 24" class="star">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+              </svg>
+            </div>
+          </div>
+
+          <p class="reviews__text" data-i18n="reviews_text3">
+Nous avons eu la chance de faire appel à a Lydia pour le baptême de notre fille. Du début à la fin, tout est parfait ! Communication, réactivité, adaptabilité au top. Livraison et installation des plats chauds à domicile, tout le monde a vraiment apprécié la qualité et la gourmandise de ce qu'elle nous a préparé !
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       CLIENTS — CARROUSEL INFINI
+       ═══════════════════════════════════════════════════════ -->
+  <section id="clients" aria-label="Nos clients et partenaires">
+    <div class="clients-inner">
+      <p class="clients-label reveal">Ils nous font confiance</p>
+    </div>
+    <div class="marquee">
+      <div class="marquee__track">
+        <span class="client-logo">[Nom client / partenaire 1]</span>
+        <span class="client-logo-dot">·</span>
+        <span class="client-logo">[Nom client / partenaire 2]</span>
+        <span class="client-logo-dot">·</span>
+        <span class="client-logo">[Nom client / partenaire 3]</span>
+        <span class="client-logo-dot">·</span>
+        <span class="client-logo">[Nom client / partenaire 4]</span>
+        <span class="client-logo-dot">·</span>
+        <span class="client-logo">[Nom client / partenaire 5]</span>
+        <span class="client-logo-dot">·</span>
+        <span class="client-logo">[Nom client / partenaire 6]</span>
+        <span class="client-logo-dot">·</span>
+        <!-- duplicate set for seamless loop -->
+        <span class="client-logo">[Nom client / partenaire 1]</span>
+        <span class="client-logo-dot">·</span>
+        <span class="client-logo">[Nom client / partenaire 2]</span>
+        <span class="client-logo-dot">·</span>
+        <span class="client-logo">[Nom client / partenaire 3]</span>
+        <span class="client-logo-dot">·</span>
+        <span class="client-logo">[Nom client / partenaire 4]</span>
+        <span class="client-logo-dot">·</span>
+        <span class="client-logo">[Nom client / partenaire 5]</span>
+        <span class="client-logo-dot">·</span>
+        <span class="client-logo">[Nom client / partenaire 6]</span>
+        <span class="client-logo-dot">·</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" aria-labelledby="faq-title">
+    <div class="faq-inner">
+      <div class="faq-header reveal">
+        <p class="section-eyebrow">Questions fréquentes</p>
+        <h2 class="section-title" id="faq-title">Tout ce que vous<br />souhaitez savoir.</h2>
+      </div>
+
+      <div class="faq-list" role="list">
+        <div class="faq-item reveal" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a1">
+            <span>Quel est le délai idéal pour réserver votre traiteur ?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" id="faq-a1" role="region">
+            <div class="faq-answer-inner">
+              Nous recommandons de nous contacter au minimum 3 mois avant l'événement pour les cocktails et buffets, et 6 à 12 mois à l'avance pour les mariages et grands événements. Cela nous permet de construire avec vous un projet gastronomique véritablement personnalisé. Pour les demandes de dernière minute, n'hésitez pas à nous contacter : nous faisons notre possible selon nos disponibilités.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-1" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a2">
+            <span>Proposez-vous des dégustations avant validation du menu ?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" id="faq-a2" role="region">
+            <div class="faq-answer-inner">
+              Absolument. Pour les mariages et événements de plus de 50 personnes, nous organisons systématiquement une séance de dégustation. C'est un moment précieux où nous affinons ensemble les saveurs, les textures et les présentations. Cette étape est incluse dans nos forfaits premium — parce qu'un menu d'exception ne s'improvise pas, il se construit en dialogue.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-2" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a3">
+            <span>Gérez-vous les régimes alimentaires spécifiques et les allergies ?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" id="faq-a3" role="region">
+            <div class="faq-answer-inner">
+              La santé et le plaisir de vos convives sont notre priorité absolue. Nous proposons systématiquement des alternatives pour les allergies courantes (gluten, lactose, fruits à coque, etc.) ainsi que des menus végétariens, vegan et halal. Un questionnaire détaillé vous sera transmis lors de notre premier échange afin de n'oublier aucune contrainte alimentaire.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-1" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a4">
+            <span>Intervenez-vous dans toute l'Île-de-France et au-delà ?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" id="faq-a4" role="region">
+            <div class="faq-answer-inner">
+              Notre rayon d'intervention principal couvre l'ensemble de l'Île-de-France (Paris et les 8 départements). Nous intervenons également ponctuellement en province pour des événements d'envergure — châteaux, domaines viticoles, grandes propriétés. Des frais de déplacement peuvent s'appliquer au-delà de 80 km de Paris. Contactez-nous pour étudier votre projet.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-2" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a5">
+            <span>Quelle est la capacité maximale d'un événement que vous pouvez gérer ?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" id="faq-a5" role="region">
+            <div class="faq-answer-inner">
+              Nous intervenons pour des événements de 10 à 200 convives en service à table, et jusqu'à 300 personnes pour les cocktails et buffets. Au-delà, nous étudions chaque demande au cas par cas avec des partenaires logistiques de confiance. Notre taille humaine est précisément ce qui nous permet de garantir une qualité et une attention irréprochables à chaque événement.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-3" role="listitem">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a6">
+            <span>Fournissez-vous aussi la vaisselle, le mobilier et la décoration de table ?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" id="faq-a6" role="region">
+            <div class="faq-answer-inner">
+              Nous proposons des prestations modulables selon vos besoins. Nos formules complètes incluent la vaisselle, le linge de table, les verreries et le mobilier de réception via nos partenaires sélectionnés. Nous pouvons aussi nous adapter à votre propre prestataire décoration. Notre objectif est de vous offrir une solution sur-mesure, sans contrainte.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer id="footer" role="contentinfo">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#hero" class="logo" aria-label="Lydia Passion Traiteur — Retour en haut">
+          <span class="logo-name"><img src="assets/images/logo.png" alt=""></span>
+          <span class="logo-sub">Traiteur</span>
+        </a>
+        <p class="footer-tagline">
+          Une gastronomie d'exception pour chacune de vos réceptions. L'art de recevoir, sublimé.
+        </p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn" aria-label="Instagram">in</a>
+          <a href="#" class="social-btn" aria-label="Facebook">fb</a>
+          <a href="#" class="social-btn" aria-label="LinkedIn">li</a>
+          <a href="#" class="social-btn" aria-label="Pinterest">pi</a>
+        </div>
+      </div>
+
+      <div>
+        <p class="footer-col-title">Navigation</p>
+        <nav class="footer-links" aria-label="Navigation pied de page">
+          <a href="#hero">Accueil</a>
+          <a href="#prestations">Prestations</a>
+          <a href="#galerie">Galerie</a>
+          <a href="#valeurs">Nos valeurs</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+
+      <div>
+        <p class="footer-col-title">Prestations</p>
+        <nav class="footer-links" aria-label="Nos prestations">
+          <a href="#prestations">Mariages</a>
+          <a href="#prestations">Cocktails</a>
+          <a href="#prestations">Événements pro</a>
+          <a href="#prestations">Réceptions privées</a>
+          <a href="#prestations">Buffets & Brunchs</a>
+        </nav>
+      </div>
+
+      <div>
+        <p class="footer-col-title">Contact</p>
+        <address style="font-style:normal;">
+          <p class="footer-contact-item">07 67 13 54 69</p>
+          <p class="footer-contact-item">Normandie<br />& environs</p>
+        </address>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 Lydia Passion Traiteur. Tous droits réservés.</p>
+      <nav class="footer-legal" aria-label="Liens légaux">
+        <a href="#">Mentions légales</a>
+        <a href="#">Politique de confidentialité</a>
+        <a href="#">CGV</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Vue agrandie de la galerie">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Fermer">✕</button>
+    <div class="lightbox-content">
+      <div id="lightboxImg" style="width:500px;height:350px;background:linear-gradient(135deg,#2F2421,#591716);display:flex;align-items:center;justify-content:center;">
+        <svg viewBox="0 0 120 60" style="width:120px;opacity:0.2">
+          <text x="60" y="45" text-anchor="middle" font-family="Georgia" font-size="50" fill="white">LP</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
