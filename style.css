@@ -184,7 +184,7 @@ body.curtain-done #curtain { display: none; }
     display: flex;
     align-items: center;
     padding: 0;
-    height: 50px;
+    height: 40px;
     transition: 0.3s;
     /* Use full navbar height without overflowing */
     position: absolute;
@@ -573,7 +573,7 @@ body.curtain-done #curtain { display: none; }
 .prestations {
     padding: 20px 0;
     overflow: hidden;
-    margin: 40px;
+    margin: 40px 0;
 }
 
 .section-header {
@@ -1058,7 +1058,6 @@ body.curtain-done #curtain { display: none; }
     background: var(--white);
     border: 1px solid #f0f0f0;
     border-radius: 12px;
-    padding: 24px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
     text-align: left;
     display: flex;
@@ -1066,6 +1065,8 @@ body.curtain-done #curtain { display: none; }
     flex: 0 0 85%;
     max-width: 380px;
     scroll-snap-align: center;
+    max-height: 400px;
+    overflow-y: auto;
 }
 
 .reviews__card-top {
@@ -1073,6 +1074,8 @@ body.curtain-done #curtain { display: none; }
     align-items: flex-start;
     gap: 1rem;
     margin-bottom: 0.75rem;
+    padding: 24px;
+    padding-bottom: 0;
 }
 
 .reviews__avatar-wrap {
@@ -1136,6 +1139,7 @@ body.curtain-done #curtain { display: none; }
     align-items: center;
     gap: 0.5rem;
     margin-bottom: 1rem;
+    padding: 0 24px;
 }
 
 .reviews__rating .star {
@@ -1155,6 +1159,27 @@ body.curtain-done #curtain { display: none; }
     line-height: 1.5;
     margin-bottom: 1rem;
     flex: 1;
+    overflow-y: auto;
+    width: 100%;
+    padding: 24px;
+    padding-top: 0;
+}
+
+.reviews__text::-webkit-scrollbar {
+  width: 8px;
+}
+
+.reviews__text::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.reviews__text::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 999px;
+}
+
+.reviews__text::-webkit-scrollbar-thumb:hover {
+  background: #666;
 }
 
 .reviews__readmore {
@@ -1247,14 +1272,14 @@ body.curtain-done #curtain { display: none; }
 /* ============================================
    FOOTER
 ============================================ */
-#footer { background: var(--ebene); padding: 4rem 3rem 2rem; }
+#footer { background: var(--cerise); padding: 4rem 3rem 2rem; }
 .footer-top {
   max-width: 1400px; margin: 0 auto;
   display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 4rem;
   padding-bottom: 3rem; border-bottom: 1px solid rgba(207, 199, 188, 0.1);
 }
 .footer-brand .logo-name { font-size: 1.1rem; width: 60%; display: inline-block;}
-.logo-name img {width: 100%; filter: invert(1);}
+.footer__logo {height: 48px; filter: invert(1);}
 .footer-tagline { font-size: 0.8rem; color: var(--taupe); line-height: 1.8; margin-top: 1rem; max-width: 260px; }
 .footer-socials { display: flex; gap: 0.8rem; margin-top: 1.5rem; }
 .social-btn {
@@ -1274,6 +1299,33 @@ body.curtain-done #curtain { display: none; }
 .footer-legal { display: flex; gap: 1.5rem; }
 .footer-legal a { font-size: 0.72rem; color: rgba(207, 199, 188, 0.3); transition: color var(--transition); }
 .footer-legal a:hover { color: var(--taupe); }
+.footer__socials {
+    display: flex;
+    gap: 5px;
+    margin-top: 14px;
+}
+.footer__social {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: all var(--transition);
+}
+.footer__social:hover {
+    background: var(--cerise-light);
+    transform: translateY(-2px);
+}
+.footer__social svg {
+    width: 18px;
+    height: 18px;
+    fill: rgba(255, 255, 255, 0.7);
+    transition: fill var(--transition);
+}
+
 
 /* ============================================
    LIGHTBOX
@@ -1328,6 +1380,7 @@ body.curtain-done #curtain { display: none; }
     scroll-padding-left: 1.5rem;
     scrollbar-width: none;
   }
+  .navbar__logo { height: 44px; }
   .valeurs-row::-webkit-scrollbar { display: none; }
   .valeur-card { flex: 0 0 70vw; scroll-snap-align: start; }
   .valeur-card:first-child { margin-left: 1.5rem; }
