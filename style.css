@@ -7,7 +7,7 @@
   --ivoire: #F4F1EA;
   --taupe: #CFC7BC;
   --cerise: #591716;
-  --cerise-light: #6e1e1d;
+  --cerise-light: #c03937;
   --chocolat: #2F2421;
   --ebene: #262424;
   --white: #ffffff;
@@ -413,6 +413,7 @@ body.curtain-done #curtain { display: none; }
             rgba(26, 26, 26, 0.45) 0%,
             hsla(0, 0%, 0%, .4));
     z-index: 1;
+    backdrop-filter: blur(3px);
 }
 
 .hero__content {
@@ -442,8 +443,8 @@ body.curtain-done #curtain { display: none; }
 .hero__title {
     font-family: var(--ff-display);
     font-size: clamp(2.2rem, 5.5vw, 4rem);
-    font-weight: 700;
-    color: var(--white);
+    font-weight: 800;
+    color: var(--ivoire);
     line-height: 1.15;
     margin-bottom: var(--space-sm);
     animation: fadeInUp 0.9s 0.15s ease-out both;
@@ -451,7 +452,7 @@ body.curtain-done #curtain { display: none; }
 
 /* Typewriter effect cursor */
 .typewriter {
-    color: var(--gold);
+    color: var(--cerise-light);
     /* the color of the writing text */
 }
 
@@ -625,7 +626,7 @@ body.curtain-done #curtain { display: none; }
     height: 48px;
     border-radius: 50%;
     border: 1.5px solid rgba(96, 14, 26, 0.12);
-    background: rgba(255, 255, 255, 0.9);
+    background: var(--cerise);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     cursor: pointer;
@@ -638,7 +639,7 @@ body.curtain-done #curtain { display: none; }
 .carousel__arrow svg {
     width: 20px;
     height: 20px;
-    stroke: var(--ebene);
+    stroke: var(--ivoire);
     transition: stroke var(--transition);
 }
 
@@ -730,8 +731,8 @@ body.curtain-done #curtain { display: none; }
 
 .card__title {
     font-family: var(--ff-display);
-    font-size: 1.2rem;
-    color: var(--ebene);
+    font-size: 1.3rem;
+    color: var(--cerise-light);
     font-weight: 700;
     margin-bottom: 0.5rem;
 }
@@ -892,11 +893,14 @@ body.curtain-done #curtain { display: none; }
   overflow: hidden;
   margin-bottom: 1.4rem;
   background: linear-gradient(150deg, rgba(89,23,22,0.35), rgba(38,36,36,0.6));
+
 }
 .valeur-card__media img {
   width: 100%; height: 100%;
   object-fit: cover;
   transition: transform 0.7s cubic-bezier(0.25,0.46,0.45,0.94);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    position: relative;
 }
 .valeur-card:hover .valeur-card__media img { transform: scale(1.06); }
 
@@ -956,6 +960,10 @@ body.curtain-done #curtain { display: none; }
   letter-spacing: 0.15em; text-transform: uppercase;
   color: rgba(47, 36, 33, 0.32); transition: color var(--transition);
   white-space: nowrap;
+  height: 50px;
+}
+.client-logo img {
+    height: 100%;
 }
 .client-logo:hover { color: var(--cerise); }
 .client-logo-dot {
