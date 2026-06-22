@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
 
+@font-face {
+    src: url(assets/fonts/BodoniFLF-Bold.woff);
+    font-family: 'BodoniFLF';
+}
+
 /* ============================================
    TOKENS & RESET
 ============================================ */
@@ -13,7 +18,7 @@
   --white: #ffffff;
   --gold: rgb(212, 183, 110);
 
-  --ff-display: 'Bodoni Moda', 'Cormorant Garamond', Georgia, serif;
+  --ff-display: "BodoniFLF" ,'Bodoni Moda', 'Cormorant Garamond', Georgia, serif;
   --ff-body: 'Inter', system-ui, sans-serif;
 
   --space-xs: 0.5rem;

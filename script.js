@@ -27,7 +27,7 @@
     const PAUSE_EMPTY_WORD = 1200;
 
     function typeEffect() {
-      const words = ["mariages", "cocktails élégants", "événements uniques"];
+      const words = ["mariages", "cocktails", "événements"];
       const currentWord = words[wordIndex];
 
       // Manage cursor blinking state (stop blinking while animating)
