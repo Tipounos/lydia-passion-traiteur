@@ -168,6 +168,42 @@
 
 
     // ============================================
+    // REELS INSTAGRAM — lecture inline
+    // ============================================
+    document.querySelectorAll('.reel-card').forEach(card => {
+      const media = card.querySelector('.reel-media');
+      const video = card.querySelector('.reel-video');
+      const playBtn = card.querySelector('.reel-play');
+      if (!media || !video || !playBtn) return;
+
+      function playReel() {
+        // Met en pause les autres reels en cours de lecture
+        document.querySelectorAll('.reel-media.is-playing').forEach(m => {
+          if (m !== media) {
+            m.classList.remove('is-playing');
+            const v = m.querySelector('.reel-video');
+            if (v) v.pause();
+          }
+        });
+
+        video.muted = false;
+        video.controls = true;
+        media.classList.add('is-playing');
+        video.play().catch(() => {
+          // Lecture avec son bloquée par le navigateur : on retente en muet
+          video.muted = true;
+          video.play();
+        });
+      }
+
+      playBtn.addEventListener('click', playReel);
+
+      video.addEventListener('ended', () => {
+        media.classList.remove('is-playing');
+      });
+    });
+
+    // ============================================
     // FAQ ACCORDION
     // ============================================
     document.querySelectorAll('.faq-question').forEach(btn => {

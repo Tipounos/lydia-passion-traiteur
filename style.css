@@ -843,6 +843,85 @@ body.curtain-done #curtain { display: none; }
 .gallery-item:hover .gallery-label { opacity: 1; transform: translateY(0); }
 
 /* ============================================
+   REELS INSTAGRAM
+============================================ */
+#reels {
+  background: var(--ebene);
+  padding: var(--space-xl) 3rem;
+  text-align: center;
+}
+.reels-header { max-width: 700px; margin: 0 auto 3.5rem; }
+.reels-header .section-title { margin-bottom: 0; }
+.reels-eyebrow {
+  justify-content: center;
+  color: var(--gold);
+}
+.reels-eyebrow::before { background: var(--gold); }
+.reels-divider {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  margin: 1.5rem auto 0;
+}
+.reels-divider span { width: 5px; height: 5px; background: var(--gold); transform: rotate(45deg); flex: none; }
+.reels-divider i { width: 70px; height: 1px; background: var(--gold); font-style: normal; }
+
+.reels-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+  max-width: 1300px;
+  margin: 0 auto 3rem;
+}
+
+.reel-card { display: flex; flex-direction: column; gap: 1rem; }
+
+.reel-media {
+  position: relative;
+  aspect-ratio: 9 / 16;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--chocolat);
+  cursor: pointer;
+}
+.reel-video {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  background: var(--chocolat);
+  transition: transform 0.6s ease;
+}
+.reel-media:hover .reel-video { transform: scale(1.04); }
+
+.reel-play {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 56px; height: 56px; border-radius: 50%;
+  background: rgba(244, 241, 234, 0.92);
+  color: var(--ebene);
+  display: flex; align-items: center; justify-content: center;
+  transition: transform var(--transition-fast), background var(--transition-fast);
+}
+.reel-play svg { width: 20px; height: 20px; margin-left: 3px; }
+.reel-media:hover .reel-play { transform: translate(-50%, -50%) scale(1.08); background: var(--white); }
+.reel-media.is-playing .reel-play { opacity: 0; pointer-events: none; }
+.reel-media.is-playing .reel-video { transform: none; }
+
+.reel-link {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  font-family: var(--ff-body); font-size: 0.8rem; letter-spacing: 0.03em;
+  color: var(--taupe);
+  transition: color var(--transition-fast);
+}
+.reel-link:hover { color: var(--gold); }
+.reel-link span { transition: transform var(--transition-fast); }
+.reel-link:hover span { transform: translateX(3px); }
+
+.reels-follow {
+  border-radius: 999px;
+  color: var(--gold);
+  border-color: var(--gold);
+}
+.reels-follow:hover { background: var(--gold); color: var(--ebene); }
+
+/* ============================================
    VALEURS — CARDS HORIZONTALES
 ============================================ */
 #valeurs {
@@ -1362,6 +1441,7 @@ body.curtain-done #curtain { display: none; }
   .trust-score-bar { gap: 1.5rem; }
   .trust-bars { display: none; }
   .valeurs-row { grid-template-columns: 1fr 1fr; gap: 2rem 1.5rem; }
+  .reels-grid { grid-template-columns: repeat(2, 1fr); max-width: 600px; }
 
 }
 
@@ -1374,7 +1454,22 @@ body.curtain-done #curtain { display: none; }
   #hero { height: 100svh; }
   .hero-content { padding: 0 1.5rem; }
   .hero-decoration { display: none; }
-  #intro, #galerie, #clients, #temoignages, #faq, #contact, #footer { padding-left: 1.5rem; padding-right: 1.5rem; }
+  #intro, #galerie, #reels, #clients, #temoignages, #faq, #contact, #footer { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .reels-grid {
+    display: flex;
+    grid-template-columns: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 1.1rem;
+    padding-bottom: 8px;
+    scroll-padding-left: 1.5rem;
+    scrollbar-width: none;
+  }
+  .reels-grid::-webkit-scrollbar { display: none; }
+  .reel-card { flex: 0 0 62vw; scroll-snap-align: start; }
+  .reel-card:first-child { margin-left: 1.5rem; }
+  .reel-card:last-child { margin-right: 1.5rem; }
   .services-header, .services-carousel-controls { padding: 0 1.5rem; }
   .services-carousel-track-outer { padding: 0 1.5rem; }
   .service-card { flex: 0 0 85vw; }
@@ -1506,4 +1601,38 @@ body.curtain-done #curtain { display: none; }
   .card {
       flex: 0 0 300px;
   }
+}
+
+/* ==========================================================================
+   BOUTON WHATSAPP FLOTTANT
+   ========================================================================== */
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 1.5rem;
+  inset-inline-end: 1.5rem;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--chocolat);
+  color: var(--ivoire);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  opacity: 0.85;
+  z-index: 400;
+  transition: opacity 0.2s, transform 0.2s, background 0.2s;
+}
+
+.whatsapp-float svg {
+  width: 22px;
+  height: 22px;
+}
+
+.whatsapp-float:hover {
+  opacity: 1;
+  transform: scale(1.08);
+  background: #25D366;
+  color: var(--ivoire);
 }
